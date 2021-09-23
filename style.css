@@ -1,0 +1,170 @@
+:root {
+  /* ### Primary */
+
+  --paleBlue-hue: 225;
+  --paleBlue-saturation: 100%;
+  --paleBlue-lightness: 94%;
+  --paleBlue: var(--paleBlue-hue), var(--paleBlue-saturation),
+    var(--paleBlue-lightness);
+
+  --brightBlue-hue: 245;
+  --brightBlue-saturation: 75%;
+  --brightBlue-lightness: 52%;
+  --brightBlue: var(--brightBlue-hue), var(--brightBlue-saturation),
+    var(--brightBlue-lightness);
+
+  /* ### Neutral */
+
+  --veryPaleBlue-hue: 225;
+  --veryPaleBlue-saturation: 100%;
+  --veryPaleBlue-lightness: 98%;
+  --veryPaleBlue: var(--veryPaleBlue-hue), var(--veryPaleBlue-saturation),
+    var(--veryPaleBlue-lightness);
+  /* <!-- svg icon font color? --> */
+  --desaturatedBlue-hue: 224;
+  --desaturatedBlue-saturation: 23%;
+  --desaturatedBlue-lightness: 55%;
+  --desaturatedBlue: var(--desaturatedBlue-hue),
+    var(--desaturatedBlue-saturation), var(--desaturatedBlue-lightness);
+  /* <!-- font color --> */
+  --darkBlue-hue: 223;
+  --darkBlue-saturation: 47%;
+  --darkBlue-lightness: 23%;
+  --darkBlue: var(--darkBlue-hue), var(--darkBlue-saturation),
+    var(--darkBlue-lightness);
+
+  --borderRadius: 1rem;
+  --borderRadius2: 0.5rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(var(--paleBlue));
+  font-family: "Red Hat Display", sans-serif;
+  color: hsl(
+    var(--darkBlue-hue),
+    var(--darkBlue-saturation),
+    var(--darkBlue-lightness)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  height: 32rem;
+  width: 20rem;
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+}
+
+.top-section {
+  height: 10rem;
+  background-image: url(./images/illustration-hero.svg);
+  background-size: cover;
+}
+
+.bottom-section {
+  background: white;
+  height: 100%;
+  display: flex;
+  /* justify-content: center; */
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+.order-summary {
+  font-weight: 900;
+  font-size: 1.25em;
+  padding-bottom: 1rem;
+}
+
+.text {
+  padding-bottom: 1rem;
+  font-size: 14px;
+  color: hsl(var(--desaturatedBlue));
+}
+
+.payment-plan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(
+    var(--veryPaleBlue-hue),
+    var(--veryPaleBlue-saturation),
+    var(--veryPaleBlue-lightness)
+  );
+  border-radius: var(--borderRadius2);
+  padding: 1rem;
+}
+
+.payment-middle {
+  margin-right: 2rem;
+}
+
+.payment-middle .title {
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.payment-middle .price {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.payment-right span {
+  font-size: 10px;
+  text-decoration: underline;
+  color: hsl(
+    var(--brightBlue-hue),
+    var(--brightBlue-saturation),
+    var(--brightBlue-lightness)
+  );
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.payment-right span:hover {
+  --brightBlue-saturation: 100%;
+  --brightBlue-lightness: 50%;
+  text-decoration: none;
+}
+
+.pay-button {
+  background-color: hsl(
+    var(--brightBlue-hue),
+    var(--brightBlue-saturation),
+    var(--brightBlue-lightness)
+  );
+  font-weight: 700;
+  color: white;
+  padding: 1em 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-radius: var(--borderRadius2);
+  cursor: pointer;
+}
+
+.pay-button:hover {
+  --brightBlue-saturation: 50%;
+  --brightBlue-lightness: 60%;
+}
+
+.cancel-button {
+  font-weight: 700;
+  font-size: 14px;
+  color: hsl(var(--desaturatedBlue));
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  color: hsl(var(--darkBlue));
+}
